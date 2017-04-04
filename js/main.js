@@ -10,6 +10,12 @@ angular.module('myApp', ['zingchart-angularjs'])
       $http.get('https://restcountries.eu/rest/v2/alpha/' + ev.shapeid)
         .then(function(response) {
           $scope.country = response.data;
+        }, function(error) {
+          $scope.country.name = 'Not Available'
+          $scope.country.capital = 'Not Available'
+          $scope.country.region = 'Not Available'
+          $scope.country.population = 0
+          $scope.country.flag = 'http://vignette2.wikia.nocookie.net/main-cast/images/5/5b/Sorry-image-not-available.png/revision/latest?cb=20160625173435'
         }
       )
     }

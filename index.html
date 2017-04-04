@@ -23,18 +23,15 @@
   <script src="js/zingchart-angularjs.js"></script>
 </head>
 <body ng-controller="ChartController">
-    <!-- <div id="resizable"> -->
-    <div zingchart id="myChart" zc-json="myJson" zc-width=1200 zc-height=990></div>
-    <!-- </div> -->
+    <div zingchart id="myChart" zc-json="myJson" zc-width=1150 zc-height=700></div>
 
     <div class="country">
-      <h3>Country: {{country.name}}</h3>
+      <h4>Country: {{country.name}}</h4>
       <p>Capital: {{country.capital}}</p>
       <p>Region: {{country.region}}</p>
       <p>Population: {{country.population | number:0}}</p>
-      <img ng-src="{{country.flag}}" height=100>
+      <img ng-show='country' ng-src="{{country.flag}}" width=150 class="flag">
     </div>
-  <!-- <div id='myChart'></div> -->
 
   <script src="js/main.js"></script>
 
