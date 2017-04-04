@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>World Flags</title>
+  <!-- MY CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <!-- BOOTSTRAP CDN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- ZING CHART CDN-->
+  <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+  <script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";</script>
+  <script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];
+  </script>
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-resource.min.js"></script>
+
+  <script src="js/zingchart-angularjs.js"></script>
+</head>
+<body ng-controller="ChartController">
+    <!-- <div id="resizable"> -->
+    <div zingchart id="myChart" zc-json="myJson" zc-width=1200 zc-height=990></div>
+    <!-- </div> -->
+
+    <div class="country">
+      <h3>Country: {{country.name}}</h3>
+      <p>Capital: {{country.capital}}</p>
+      <p>Region: {{country.region}}</p>
+      <p>Population: {{country.population | number:0}}</p>
+      <img ng-src="{{country.flag}}" height=100>
+    </div>
+  <!-- <div id='myChart'></div> -->
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+* {
+  font-family: sans-serif;
+}
+
+#myChart {
+  float: left;
+}
+
+#resizable {
+  height: 400px;
+  width: 500px;
+  padding: 5px;
+  border: 2px dashed #AAA;
+}
