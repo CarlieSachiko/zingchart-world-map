@@ -10,6 +10,9 @@ angular.module('myApp', ['zingchart-angularjs'])
       $http.get('https://restcountries.eu/rest/v2/alpha/' + ev.shapeid)
         .then(function(response) {
           $scope.country = response.data;
+          if ($scope.country.capital=== '') {
+            $scope.country.capital = 'Not Available'
+          }
         }, function(error) {
           $scope.country.name = 'Not Available'
           $scope.country.capital = 'Not Available'
